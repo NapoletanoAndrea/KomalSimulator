@@ -170,6 +170,13 @@ MonoBehaviour:
   komal: {fileID: 1829929101}
   sleepingKeywords:
   - Komal svegliati
+  talkingKeys:
+  - workingStatus: 01000000
+    preKeyword: Komal
+    keywords:
+    - Stai zitto
+    possibleResponses:
+    - {fileID: 11400000, guid: ba32088690170a64a95e6bafe05187ba, type: 2}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -453,6 +460,7 @@ GameObject:
   - component: {fileID: 1829929103}
   - component: {fileID: 1829929102}
   - component: {fileID: 1829929101}
+  - component: {fileID: 1829929104}
   m_Layer: 0
   m_Name: Komal
   m_TagString: Untagged
@@ -543,3 +551,16 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1829929104
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1829929100}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eebba6976112d1d4faf39b6f89a1704b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  snoringCue: {fileID: 11400000, guid: 506d36537c10e974287ab310d1119478, type: 2}
