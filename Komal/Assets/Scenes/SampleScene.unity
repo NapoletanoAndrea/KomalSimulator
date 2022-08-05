@@ -123,6 +123,50 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &353944378
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 353944380}
+  - component: {fileID: 353944379}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &353944379
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 353944378}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84e9fbeed09259143807e2c67bcc542c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &353944380
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 353944378}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.05164689, y: -0.09850477, z: -4.380532}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &472626907
 GameObject:
   m_ObjectHideFlags: 0
@@ -170,13 +214,67 @@ MonoBehaviour:
   komal: {fileID: 1829929101}
   sleepingKeywords:
   - Komal svegliati
+  silenceKeywords:
+  - Silenzio
+  stayUpKeys:
+    keywords:
+    - Komal resta sveglio
+    - Komal non dormire
+    possibleResponses:
+    - {fileID: 11400000, guid: 53c82e938a52842429edf0bddecabf0f, type: 2}
   talkingKeys:
   - workingStatus: 01000000
     preKeyword: Komal
-    keywords:
-    - Stai zitto
-    possibleResponses:
-    - {fileID: 11400000, guid: ba32088690170a64a95e6bafe05187ba, type: 2}
+    keyResponses:
+    - keywords:
+      - Cosa ne pensi?
+      - Dammi consiglio
+      - Condividi la tua saggezza
+      - Che ne pensi?
+      - Che ne pensa?
+      - Secondo te?
+      possibleResponses:
+      - {fileID: 11400000, guid: 88538a3b16167d243988616ed5fcd0d4, type: 2}
+      - {fileID: 11400000, guid: 50194fd778edc1f43a71ddb005d5ac0f, type: 2}
+    - keywords:
+      - "Com'\xE8 Grassi"
+      possibleResponses:
+      - {fileID: 11400000, guid: b06dc0a9b53961947a0fa0c6c539b780, type: 2}
+    - keywords:
+      - Vaffanculo
+      - Fanculo
+      - Vai a cacare
+      - Vai a cagare
+      - Va a cacare
+      - Va a cagare
+      - Sei un frocio
+      - Sei uno stronzo
+      - Sei un bastardo
+      - Bastardo
+      - Stronzo
+      - Infame
+      - Sei un infame
+      - Vai a dormire
+      - Va a dormire
+      - Dormi
+      - Stupido
+      - Sei stupido
+      - Sei uno stupido
+      - Scemo
+      - Sei uno scemo
+      - Sei scemo
+      - Non capisci un cazzo
+      - Non capisce un cazzo
+      - Imbecille
+      - Sei un imbecille
+      - Stai zitto
+      - Zitto
+      possibleResponses:
+      - {fileID: 11400000, guid: 5974468651e2c7946be71f772d1fe616, type: 2}
+      - {fileID: 11400000, guid: e2ea5f3ba37222a41b4a03b222ccb060, type: 2}
+      - {fileID: 11400000, guid: b06dc0a9b53961947a0fa0c6c539b780, type: 2}
+      - {fileID: 11400000, guid: ba32088690170a64a95e6bafe05187ba, type: 2}
+      - {fileID: 11400000, guid: 53c82e938a52842429edf0bddecabf0f, type: 2}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -405,6 +503,61 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &988132165
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 988132167}
+  - component: {fileID: 988132166}
+  m_Layer: 0
+  m_Name: FunController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &988132166
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 988132165}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7143b193acecb5444b2660ad5f63bc0a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  keyCodeResponses:
+  - keyCode: 323
+    response: {fileID: 11400000, guid: 88538a3b16167d243988616ed5fcd0d4, type: 2}
+  - keyCode: 324
+    response: {fileID: 11400000, guid: 50194fd778edc1f43a71ddb005d5ac0f, type: 2}
+  - keyCode: 326
+    response: {fileID: 11400000, guid: 5974468651e2c7946be71f772d1fe616, type: 2}
+  - keyCode: 327
+    response: {fileID: 11400000, guid: 1a84e2040d203fa4289a8042864a8954, type: 2}
+  - keyCode: 325
+    response: {fileID: 11400000, guid: e2ea5f3ba37222a41b4a03b222ccb060, type: 2}
+--- !u!4 &988132167
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 988132165}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.05164689, y: -0.09850477, z: -4.380532}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1664227816
 GameObject:
   m_ObjectHideFlags: 0
@@ -484,6 +637,8 @@ MonoBehaviour:
   currentStatus: 0
   sleepingSprite: {fileID: 21300000, guid: 9672ec536c67a764d830b78859e1b332, type: 3}
   idleSprite: {fileID: 21300000, guid: dff8dfe827ad929448d6e15ad2c7764f, type: 3}
+  idleTimer: 120
+  canSleep: 1
 --- !u!212 &1829929102
 SpriteRenderer:
   m_ObjectHideFlags: 0

@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: da1eb213024082840ad6bc4df16ccd44, type: 3}
-  m_Name: CheVuoi
+  m_Name: Bastardo
   m_EditorClassIdentifier: 
-  audioClip: {fileID: 8300000, guid: 5d6c1b47ef4f6994285efae4b22548c1, type: 3}
+  audioClip: {fileID: 8300000, guid: 7d9f7a0ffab5d8e4ca099e6e03e35211, type: 3}
   volume: 1
   pitch: 1
   loop: 0

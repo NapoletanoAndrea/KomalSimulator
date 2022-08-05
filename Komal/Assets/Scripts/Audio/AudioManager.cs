@@ -26,13 +26,7 @@ public class AudioManager : MonoBehaviour
     private float bufferedFadeSeconds;
 
     private void Awake() {
-        if (!Instance) {
-            Instance = this;
-            DontDestroyOnLoad(this);
-        }
-        else {
-            Destroy(this);
-        }
+        Instance = this;
     }
 
     // private void OnValidate() {

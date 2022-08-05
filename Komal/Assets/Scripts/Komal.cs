@@ -25,10 +25,15 @@ public class Komal : MonoBehaviour {
 	[SerializeField] private Sprite sleepingSprite;
 	[SerializeField] private Sprite idleSprite;
 
+	[SerializeField] private float idleTimer;
+
+	public bool canSleep;
+
 	private SpriteRenderer spriteRenderer;
 	private KomalAudio komalAudio;
 
 	private bool hasChangedStatus;
+	private float idleCount;
 
 	#endregion
 
@@ -53,6 +58,18 @@ public class Komal : MonoBehaviour {
 		CurrentStatus = startStatus;
 	}
 
+	private void Update() {
+		if (CurrentStatus == Status.Idle && canSleep) {
+			if (Time.time - idleCount >= idleTimer) {
+				CurrentStatus = Status.Sleeping;
+			}
+		}
+	}
+
+	public void Tick() {
+		idleCount = Time.time;
+	}
+
 	private void OnStatusChanged(Status nextStatus) {
 		if (CurrentStatus == nextStatus && hasChangedStatus) {
 			return;
@@ -66,10 +83,11 @@ public class Komal : MonoBehaviour {
 
 		if (nextStatus == Status.Sleeping) {
 			komalAudio.PlaySnoringCue();
+			SetSprite(SpriteType.Sleeping);
 		}
 
 		if (nextStatus == Status.Idle) {
-			
+			idleCount = Time.time;
 		}
 	}
 
